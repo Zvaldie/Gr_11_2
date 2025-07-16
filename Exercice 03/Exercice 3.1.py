@@ -1,10 +1,10 @@
-# === Saisie de l'utilisateur ===
-heures = int(input("Nombre d'heures : "))
-minutes = int(input("Nombre de minutes : "))
-secondes = int(input("Nombre de secondes : "))
+# Demander les informations
+age = int(input("Entrez votre âge : "))
+pays = input("Entrez votre pays : ").lower()
 
-# === Conversion en secondes ===
-total_secondes = heures * 3600 + minutes * 60 + secondes
-
-# === Affichage du résultat ===
-print(f"Durée totale : {total_secondes} secondes.")
+if age >= 18 and (pays == "congo" or pays == "cameroun"):
+    print("Inscription autorisée.")
+elif age < 18:
+    print("Vous êtes trop jeune pour vous inscrire.")
+else:
+    print("Désolé, programme réservé aux ressortissants du Congo ou Cameroun.")
